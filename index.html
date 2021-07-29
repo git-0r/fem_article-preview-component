@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Frontend Mentor | Article preview component</title>
+
+</head>
+
+<body>
+
+  <main>
+
+    <div class="card">
+      <div class="image">
+        <img src="images/drawers.jpg" alt="">
+      </div>
+      <div class="text-content">
+        <p class="p1">Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home</p>
+        <p class="p2">Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.</p>
+        <div class="author">
+          <img class="avatar" src="images/avatar-michelle.jpg" alt="">
+          <div class="info">
+            <p class="name">Michelle Appleton</p>
+            <p class="date">28 Jun 2020</p>
+          </div>
+          <div class="icon-share"></div>
+        </div>
+      </div>
+      <div class="share-options">
+        <p>SHARE</p>
+        <div class="icons">
+          <ion-icon class="icon" name="logo-facebook"></ion-icon>
+        </div>
+        <div class="icons">
+          <ion-icon class="icon" name="logo-twitter"></ion-icon>
+        </div>
+        <div class="icons">
+          <ion-icon class="icon" name="logo-pinterest"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    const iconShare = document.querySelector('.icon-share');
+    const shareOptions = document.querySelector('.share-options');
+
+    iconShare.addEventListener('click', () => {
+      shareOptions.classList.toggle('share-options-visibility')
+    })
+  </script>
+</body>
+
+</html>

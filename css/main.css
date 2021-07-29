@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ecf2f8;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  font-size: 13px;
+  font-family: 'Manrope', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .card {
+  width: 677px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40vh;
+  position: relative;
+}
+
+main .card .image {
+  width: 35%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  overflow: hidden;
+}
+
+main .card .image img {
+  width: 120%;
+  height: 100%;
+}
+
+main .card .text-content {
+  width: 65%;
+  height: 100%;
+  background-color: white;
+  padding: 0 2rem 0 2rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+main .card .text-content .p1 {
+  font-size: 150%;
+  font-weight: 700;
+  color: #48556a;
+}
+
+main .card .text-content .p2 {
+  color: #6d7f97;
+}
+
+main .card .text-content .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .card .text-content .author .avatar {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+main .card .text-content .author .info {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 1rem;
+}
+
+main .card .text-content .author .info .name {
+  margin: 0;
+  font-weight: 700;
+  color: #48556a;
+}
+
+main .card .text-content .author .info .date {
+  margin: 0;
+  color: #6d7f97;
+}
+
+main .card .text-content .author .icon-share {
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  background-color: #ecf2f8;
+  background-image: url("../images/icon-share.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+main .card .share-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: -80px;
+  background-color: #48556a;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  visibility: hidden;
+}
+
+main .card .share-options::after {
+  content: "";
+  border: 10px solid #48556a;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  -webkit-transform: rotate(90deg) translate(175%, 500%);
+          transform: rotate(90deg) translate(175%, 500%);
+}
+
+main .card .share-options p {
+  margin: 0;
+  letter-spacing: 00.5rem;
+}
+
+main .card .share-options .icon {
+  vertical-align: middle;
+  margin-left: 1rem;
+  font-size: 150%;
+}
+
+main .card .share-options-visibility {
+  visibility: visible;
+}
+
+@media (min-width: 601px) and (max-width: 850px) {
+  main {
+    height: 100%;
+    overflow: hidden;
+  }
+  main .card {
+    width: 60%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 4rem 0;
+  }
+  main .card .image {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+  main .card .image img {
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+  }
+  main .card .text-content {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+  }
+  main .card .text-content .author {
+    margin: 2rem 0;
+  }
+  main .card .text-content .author .icon-share {
+    z-index: 1;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  main .card .share-options {
+    position: relative;
+    top: -4rem;
+    padding: 1.5rem;
+    right: inherit;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+  main .card .share-options::after {
+    content: none;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    height: 100%;
+    overflow: hidden;
+  }
+  main .card {
+    width: 80%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 4rem 0;
+  }
+  main .card .image {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+  main .card .image img {
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+  }
+  main .card .text-content {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+  }
+  main .card .text-content .author {
+    margin: 2rem 0;
+  }
+  main .card .text-content .author .icon-share {
+    z-index: 1;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  main .card .share-options {
+    position: relative;
+    top: -4rem;
+    padding: 1.5rem;
+    right: inherit;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+  main .card .share-options::after {
+    content: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
